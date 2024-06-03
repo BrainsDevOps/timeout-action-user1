@@ -1,6 +1,9 @@
 name: Scheduled workflow to check for long running workflows
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - "feature/workflows-cleaner"
 
 jobs:
   check-running-jobs:
