@@ -19,3 +19,7 @@ jobs:
         app-id: ${{secrets.GHA_WORKFLOWS_CLEANER_APP_ID}}
         app-pk: ${{secrets.GHA_WORKFLOWS_CLEANER_PRIVATE_KEY}}
         timeout-minutes: 1
+    - name: Summary
+      run: |
+        echo "# Workflow cleaner summary" >> $GITHUB_STEP_SUMMARY
+        echo "${{steps.cleaner.outputs.report}}" >> $GITHUB_STEP_SUMMARY
