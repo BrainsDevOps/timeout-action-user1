@@ -17,7 +17,7 @@ inputs:
     description: "The timeout for workflows in minutes. Defaults to 180 minutes (3 hours)"
 outputs:
   report:
-    description: "A markdoww table with the jobs cancelled by the action"
+    description: "A markdown table with the jobs cancelled by the action"
 runs:
   using: 'node20'
   main: 'dist/index.js'
