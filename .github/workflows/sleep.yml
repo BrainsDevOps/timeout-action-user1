@@ -1,4 +1,4 @@
-name: For testing
+name: Timer - Test long running jobs
 on:
   workflow_dispatch:
     inputs:
@@ -7,7 +7,6 @@ on:
         required: false
         description: The time the sleep step will take
 
-
 jobs:
   sleep:
     name: Sleep for a while
@@ -15,4 +14,4 @@ jobs:
 
     steps:
     - name: Sleep for some time
-      run: sleep ${{inputs.timeout-seconds}}
+      run: sleep ${{ inputs.timeout-seconds }}
