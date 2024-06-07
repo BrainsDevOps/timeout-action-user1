@@ -1,6 +1,12 @@
-name: TODO - remove this workflow after testing
+name: For testing
 on:
   workflow_dispatch:
+    inputs:
+      timeout-seconds:
+        default: 300
+        required: false
+        description: The time the sleep step will take
+
 
 jobs:
   sleep:
@@ -8,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Sleep for 5 minutes
-      run: sleep 300
+    - name: Sleep for some time
+      run: sleep ${{inputs.timeout-seconds}}

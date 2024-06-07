@@ -1,9 +1,6 @@
 name: Scheduled workflow to check for long running workflows
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - "feature/workflows-cleaner"
 
 jobs:
   check-running-jobs:
@@ -14,7 +11,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
     - name: Call workflow cleaner
-      uses: ./.github/actions/workflow-cleaner
+      uses: .
       with:
         app-id: ${{secrets.GHA_WORKFLOWS_CLEANER_APP_ID}}
         app-pk: ${{secrets.GHA_WORKFLOWS_CLEANER_PRIVATE_KEY}}
