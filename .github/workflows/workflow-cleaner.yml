@@ -1,6 +1,8 @@
-name: Scheduled workflow to check for long running workflows
+name: Workflow to check for long running workflows
 on:
   workflow_dispatch:
+#  schedule:
+#    - cron: '*/30 * * * *'
 
 jobs:
   check-running-jobs:
@@ -16,3 +18,4 @@ jobs:
       with:
         app-id: ${{secrets.GHA_WORKFLOWS_CLEANER_APP_ID}}
         app-pk: ${{secrets.GHA_WORKFLOWS_CLEANER_PRIVATE_KEY}}
+        timeout-minutes: 1
