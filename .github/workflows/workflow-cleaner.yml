@@ -2,8 +2,8 @@ name: Workflow to check for long running workflows
 on:
   workflow_dispatch:
   # Schedule the check every 30 minutes    
-  schedule:
-    - cron: '*/30 * * * *' 
+  # schedule:
+  #  - cron: '*/30 * * * *' 
 
 jobs:
   check-running-jobs:
