@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Call workflow cleaner
-      uses: BrainsDevOps/timeouts-action@release/v1
+      uses: BrainsDevOps/timeouts-action@v1
       id: cleaner
       with:
         app-id: ${{secrets.GHA_WORKFLOWS_CLEANER_APP_ID}}
