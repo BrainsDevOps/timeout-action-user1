@@ -1,4 +1,4 @@
-# Workflow cleaner action
+# Workflow cleaner action tester
 Checks for all running jobs in the past X days and cancels any jobs that had been running for more than a specified timeout.
 
 ## Uses
